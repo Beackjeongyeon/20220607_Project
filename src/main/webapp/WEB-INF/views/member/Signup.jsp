@@ -11,14 +11,14 @@
     <title>회원가입 페이지 입니다.</title>
     <link rel="stylesheet" href="../../../resources/css/bootstrap.min%20(2).css">
     <style>
-        .main {
-            text-align: center;
-            width: 257px
-        }
+        /*.main {*/
+        /*    text-align: center;*/
+        /*    width: 257px*/
+        /*}*/
     </style>
 </head>
 <body>
-<body>
+<div class="container" style="width: 257px">
 <form action="/member/Signup1" method="post">
 
     <div class="main">
@@ -105,7 +105,7 @@
 
 
 </form>
-
+</div>
 
 </body>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
