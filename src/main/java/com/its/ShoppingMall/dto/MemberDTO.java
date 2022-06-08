@@ -12,8 +12,8 @@ public class MemberDTO {
     private String memberEmail;
     private String memberName;
     private String memberPhone;
-    private String memberAge;
     private String memberAddress;
+    private String memberBirth;
     private Timestamp memberCreatedDate;
 
 }
