@@ -9,57 +9,71 @@
 <html>
 <head>
     <title>회원가입 페이지 입니다.</title>
+    <link rel="stylesheet" href="../../../resources/css/bootstrap.min%20(2).css">
+    <style>
+        .main {
+            text-align: center;
+            width: 257px
+        }
+    </style>
 </head>
 <body>
 <body>
-<form action="/member/Signup1" method="post" >
-    <fieldset>
-        <div class="main">
-        <legend>로그인</legend><br>
-        <div class="form-group row">
-            <label for="memberId" class="col-sm-2 col-form-label">아이디</label>&nbsp;&nbsp;&nbsp;
-            <input type="text"  class="form-control-plaintext" id="memberId" name="memberId" placeholder="아이디를 입력해주세요">
+<form action="/member/Signup1" method="post">
+
+    <div class="main">
+        <h2>회원가입</h2><br>
+
+        <div class="form-group ">
+            <h3>아이디</h3>
+            <input type="text" class="form-control" id="memberId" name="memberId" placeholder="아이디를 입력해주세요">
         </div>
-        </div>
+
         <br>
 
         <div class="form-group">
-            <label for="exampleInputPassword" class="form-label mt-4">비밀번호</label>
+            <h3>비밀번호</h3>
             <input type="password" class="form-control" id="exampleInputPassword" name="memberPassword" placeholder="8~14자리 숫자또는 문자 입력해주세요">
         </div>
         <br>
 
         <form action="/member/passwordCheck" method="get">
             <div class="form-group">
-                <label for="passwordCheck" class="form-label mt-4">비밀번호</label>
-                <input type="text" class="form-control" id="passwordCheck" name="memberPassword"placeholder="비밀번호를 다시입력해주세요">
+
+                <input type="text" class="form-control" id="passwordCheck" name="memberPassword" placeholder="비밀번호를 다시입력해주세요">
             </div>
-        </form><br>
+        </form>
+        <br><br>
 
         <div class="form-group">
-            <label for="memberEmail" class="form-label mt-4">이메일</label>&nbsp;&nbsp;&nbsp;
+            <h3>이메일</h3>
             <input type="email" class="form-control" id="memberEmail" name="memberEmail" placeholder="Enter email">
-        </div><br>
+        </div>
+        <br>
 
         <div class="form-group">
-            <label for="memberName" class="form-label mt-4">이름</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <h3>이름</h3>
             <input type="text" class="form-control" id="memberName" name="memberName" placeholder="이름을 입력해주세요">
-        </div><br>
+        </div>
+        <br>
 
         <div class="form-group">
-            <label for="memberPhone" class="form-label mt-4">연락처</label>&nbsp;&nbsp;&nbsp;
+            <h3>연락처</h3>
             <input type="text" class="form-control" id="memberPhone" name="memberPhone" placeholder="연락처를 입력해주세요">
-        </div><br>
+        </div>
+        <br>
 
         <div class="form-group">
-        <label for="memberBirth" class="form-label mt-4">생년월일</label>
-        <input type="date" id="memberBirth" name="memberBirth">
+            <h3>생년월일</h3>
+            <input type="date" id="memberBirth" name="memberBirth"><br><br>
             <span style="color: red"> ※저희사이트는 만19세 미만은 사용할수없습니다.</span>
-        </div><br>
+        </div>
+        <br>
 
+        <h3>주소</h3><br>
         <form class="row g-6">
-            <div class="col-md-6">
-                <label for="sample6_postcode" class="form-label">주소입력</label>
+            <div class="container">
+                <h4>우편주소입력</h4>
                 <input type="text" id="sample6_postcode" name="memberAddress" placeholder="우편번호">
                 <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
             </div>
@@ -67,35 +81,30 @@
         </form>
         <form class="row g-6">
             <div class="col-md-8">
-                <label >주소</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="text" id="sample6_address" placeholder="주소">
+                <h4>주소</h4>
+                <input type="text" id="sample6_address" style="width:257px" placeholder="주소">
             </div>
 
         </form>
         <form class="row g-6">
             <div class="col-md-9">
-                <label>상세주소</label>
-                <input type="text" id="sample6_detailAddress" placeholder="상세주소">
+                <h4>상세주소</h4>
+                <input type="text" id="sample6_detailAddress" style="width:257px" placeholder="상세주소">
             </div>
 
         </form>
         <form class="row g-6">
             <div class="col-md-10">
-                <label>참고항목</label>
-                <input type="text" id="sample6_extraAddress" placeholder="참고항목">
+                <h4>참고항목</h4>
+                <input type="text" id="sample6_extraAddress" style="width:257px " placeholder="참고항목">
             </div>
-
+            <br><br><br><br><br><br>
+            <button type="submit" class="btn btn-primary">제출하기</button>
         </form>
-
-
-
-        <button type="submit" class="btn btn-primary">제출하기</button>
-
-        </fieldset>
+    </div>
 
 
 </form>
-
 
 
 </body>
@@ -163,6 +172,7 @@
         }
         // value 속성은  input 태그만 가능하다.
     }
+
     function id1Check() {
         const id = document.getElementById("id").value;
         const exp = /^(?=.*[a-z])[a-z\d]{8,20}$/;
