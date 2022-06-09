@@ -10,7 +10,7 @@
 <head>
     <link rel="stylesheet" href="../../../resources/css/bootstrap.min%20(2).css">
     <title>헤더입니다.</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,16 +36,17 @@
                 <%-- 로그인 --%>
                     <div name="memberlogin">
                 <li class="nav-item">
-                    <a class="nav-link" href="" onclick="memberlogin()">로그인</a>
+                    <a class="nav-link " href="" onclick="memberlogin()">로그인</a>
                 </li>
                     </div>
 
 
                     <%-- 회원가입 --%>
-
+                    <div name="memberSignup">
                 <li class="nav-item">
-                    <a class="nav-link" href="/member/Signup">회원가입</a>
+                    <a class="nav-link" href="" onclick="memberSignup()">회원가입</a>
                 </li>
+                    </div>
 
 
 
@@ -57,16 +58,17 @@
                 </li>
 
                     <%-- 목록 --%>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">목록창</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/board/pagingList1">게시판</a>
+                            <a class="dropdown-item" href="#">액상</a>
+                            <a class="dropdown-item" href="#">코일</a>
+                            <a class="dropdown-item" href="#">궐련형</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Best</a>
+                        </div>
+                    </li>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -80,14 +82,15 @@
 </body>
 <script>
     function memberlogin() {
-        // window.open("/member/login", "memberlogin", "width=400, height=800, top=50, left=50");
+
         var popupX = (document.body.offsetWidth / 2) - (200 / 2);
-//&nbsp;만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
-
         var popupY= (window.screen.height / 2) - (300 / 2);
-//&nbsp;만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
-
         window.open('/member/login', 'memberlogin', 'status=no, height=600, width=500, left='+ popupX + ', top='+ 200);
+    }
+    function memberSignup() {
+        var popupX = (document.body.offsetWidth / 2) - (200 / 2);
+        var popupY = (window.screen.height / 2) - (300 / 2);
+        window.open('/member/Signup', 'memberSignup', 'status=no, height=600, width=500, left=' + popupX + ', top=' + 200);
     }
 </script>
 </html>

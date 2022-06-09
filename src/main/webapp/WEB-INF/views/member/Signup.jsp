@@ -10,15 +10,9 @@
 <head>
     <title>회원가입 페이지 입니다.</title>
     <link rel="stylesheet" href="../../../resources/css/bootstrap.min%20(2).css">
-    <style>
-        /*.main {*/
-        /*    text-align: center;*/
-        /*    width: 257px*/
-        /*}*/
-    </style>
 </head>
 <body>
-<div class="container" style="width: 257px">
+<div class="mt-4 container" style="width: 257px">
 <form action="/member/Signup1" method="post">
 
     <div class="main">
@@ -36,14 +30,6 @@
             <input type="password" class="form-control" id="exampleInputPassword" name="memberPassword" placeholder="8~14자리 숫자또는 문자 입력해주세요">
         </div>
         <br>
-
-        <form action="/member/passwordCheck" method="get">
-            <div class="form-group">
-
-                <input type="text" class="form-control" id="passwordCheck" name="memberPassword" placeholder="비밀번호를 다시입력해주세요">
-            </div>
-        </form>
-        <br><br>
 
         <div class="form-group">
             <h3>이메일</h3>
@@ -70,42 +56,31 @@
         </div>
         <br>
 
-        <h3>주소</h3><br>
-        <form class="row g-6">
+
             <div class="container">
                 <h4>우편주소입력</h4>
-                <input type="text" id="sample6_postcode" name="memberAddress" placeholder="우편번호">
+                <input type="text" id="sample6_postcode" name="memberAddress"style="width:257px" placeholder="우편번호">
                 <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
-            </div>
+            </div><br>
 
-        </form>
-        <form class="row g-6">
             <div class="col-md-8">
                 <h4>주소</h4>
-                <input type="text" id="sample6_address" style="width:257px" placeholder="주소">
+                <input type="text" id="sample6_address"  style="width:257px" placeholder="주소">
             </div>
-
-        </form>
-        <form class="row g-6">
             <div class="col-md-9">
                 <h4>상세주소</h4>
                 <input type="text" id="sample6_detailAddress" style="width:257px" placeholder="상세주소">
             </div>
-
-        </form>
-        <form class="row g-6">
             <div class="col-md-10">
                 <h4>참고항목</h4>
                 <input type="text" id="sample6_extraAddress" style="width:257px " placeholder="참고항목">
             </div>
             <br><br><br><br><br><br>
             <button type="submit" class="btn btn-primary">제출하기</button>
-        </form>
-    </div>
 
 
-</form>
 </div>
+</form>
 
 </body>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
