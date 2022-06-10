@@ -11,17 +11,19 @@ import java.util.List;
 public class MemberService {
   @Autowired
   private MemberRepository memberRepository;
-    public int save(MemberDTO memberDTO) {
-        return memberRepository.save(memberDTO);
-    }
+
+  public int save(MemberDTO memberDTO) {
+    return memberRepository.save(memberDTO);
+  }
 
 
-    public MemberDTO login(MemberDTO memberDTO) {
-      return memberRepository.login(memberDTO);
-    }
+  public MemberDTO login(MemberDTO memberDTO) {
+    return memberRepository.login(memberDTO);
+  }
 
-    public List<MemberDTO> findId(MemberDTO memberDTO) {
-      return memberRepository.findId(memberDTO);
 
-    }
+  public MemberDTO findId1(String memberEmail) {
+
+    return memberRepository.findId1(memberEmail);
+  }
 }

@@ -13,16 +13,14 @@
 </head>
 <body>
 <div class="mt-4 container" style="width: 257px" >
-    <form action="/member/findId" method="get">
+    <form action="/member/findId" method="post">
         <h2>아이디찾기</h2><br>
-        <h3>이름입력</h3>
-        <input type="text"  class="form-control" id="memberName" name="memberName" placeholder="이름을 입력해주세요"><br>
-        <h3>전화번호입력</h3>
-        <input type="text" class="form-control" id="memberPhone" name="memberPhone" placeholder="전화번호를 입력해주세요"><br>
+        <h3>이메일입력</h3>
+        <input type="email" class="form-control" id="memberEmail" name="memberEmail" placeholder="Enter email">
         <button type="submit" class="btn btn-primary">확인</button><br>
     </form>
 
-    <form action="/member/findPassword" method="get">
+    <form action="/member/findPassword" method="post">
         <h2>비밀번호찾기</h2><br>
         <h3>아이디입력</h3>
         <input type="text"  class="form-control" id="memberId" name="memberId" placeholder="아이디를 입력해주세요"><br>

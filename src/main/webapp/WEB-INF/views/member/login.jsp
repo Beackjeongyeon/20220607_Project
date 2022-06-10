@@ -18,13 +18,13 @@
 
 <%--<div class="main">--%>
 <div class="mt-4 container" style="width: 257px" >
-    <form action="/member/login1" method="get">
+    <form action="/member/login1" method="post" name="memberLogin">
 <h2>로그인</h2><br>
     <h3>아이디</h3>
     <input type="text"  class="form-control" id="memberId" name="memberId" placeholder="아이디를 입력해주세요"><br>
     <h3>비밀번호</h3>
     <input type="password" class="form-control" id="exampleInputPassword" name="memberPassword" placeholder="8~14자리 숫자또는 문자 입력해주세요"><br>
-        <button type="submit" class="btn btn-primary">로그인</button><br>
+        <button type="button" onclick="loginMember()" class="btn btn-primary">로그인</button><br>
     </form>
 
 
@@ -35,4 +35,16 @@
 
 
 </body>
+<script>
+    const loginMember = () => {
+        document.memberLogin.target = "/member/login1";
+        //action
+        document.memberLogin.submit();
+
+        setTimeout(function (){
+            opener.location.href = "/";
+            window.open('about:link','_self').close();
+        },300);
+    }
+</script>
 </html>

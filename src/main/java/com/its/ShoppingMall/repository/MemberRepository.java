@@ -21,8 +21,9 @@ public class MemberRepository {
     }
 
 
-    public List<MemberDTO> findId(MemberDTO memberDTO) {
-         return Sql.selectList("member.findId",memberDTO);
+    public MemberDTO findId1(String memberEmail) {
+            System.out.println(memberEmail);
+         return Sql.selectOne("member.findId",memberEmail);
 
 
     }
