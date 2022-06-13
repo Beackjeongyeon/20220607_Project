@@ -2,17 +2,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>전자담배</title>
+    <title>액상</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../../../resources/css/styles.css" rel="stylesheet" />
+    <link href="../../../../resources/css/styles.css" rel="stylesheet" />
 
     <style>
         #slider {
@@ -47,19 +48,19 @@
     </style>
 </head>
 <body>
+<jsp:include page="../../layout/header.jsp" flush="false"></jsp:include>
 
-<jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
 
 <div class="container">
     <ul id="slider">
         <li>
-            <img src="../../../resources/img/123456.JPG"  >
+            <img src="../../../../resources/img/123456.JPG"  >
         </li>
         <li>
-            <img src="../../../resources/img/23232323131.JPG">
+            <img src="../../../../resources/img/23232323131.JPG">
         </li>
         <li>
-            <img src="../../../resources/img/323123123123123.JPG">
+            <img src="../../../../resources/img/323123123123123.JPG">
         </li>
     </ul>
 </div>
@@ -69,7 +70,7 @@
 <div class="bg-dark py-5" style="height:250px">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">전자담배</h1>
+            <h1 class="display-4 fw-bolder">액상</h1>
             <p class="lead fw-normal text-white-50 mb-0">지나친 흡연은 몸에 해롭습니다.</p>
         </div>
     </div>

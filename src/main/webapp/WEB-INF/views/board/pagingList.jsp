@@ -14,5 +14,17 @@
 </head>
 <body>
 
+<div name="pagesave">
+<button type="button"  onclick="pagesave()" class="btn btn-primary btn-lg">글작성하기</button>
+</div>
+
 </body>
+<script>
+    function pagesave() {
+
+        var popupX = (document.body.offsetWidth / 2) - (200 / 2);
+        var popupY= (window.screen.height / 2) - (300 / 2);
+        window.open('/board/save1', 'boardsave', 'status=no, height=600, width=500, left='+ popupX + ', top='+ 200);
+    }
+</script>
 </html>

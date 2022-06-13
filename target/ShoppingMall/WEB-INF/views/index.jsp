@@ -10,7 +10,7 @@
 <head>
     <link rel="stylesheet" href="../../resources/css/bootstrap.min%20(2).css">
     <title>시작페이지입니다.</title>
-
+    <link rel="stylesheet" href="../../resources/css/styles.css">
 </head>
 <body>
 <jsp:include page="layout/header.jsp" flush="false"></jsp:include>
@@ -83,6 +83,8 @@
 </body>
 </html>
 
-
+<footer class="py-5 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+</footer>
 </body>
 </html>

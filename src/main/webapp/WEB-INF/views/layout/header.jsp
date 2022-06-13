@@ -46,9 +46,17 @@
 
 
                     <%-- 회원정보 --%>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">mypage</a>
-                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">회원정보</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/board/pagingList1">Mypage</a>
+                            <a class="dropdown-item" href="/board/liquid1">회원탈퇴</a>
+                            <a class="dropdown-item" href="/board/device1">장바구니</a>
+                            <a class="dropdown-item" href="/board/cigarette1">구매내역</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/board/best1">Best</a>
+                        </div>
+                    </li>
 
                     <%-- 목록 --%>
                     <li class="nav-item dropdown">
@@ -59,7 +67,7 @@
                             <a class="dropdown-item" href="/board/device1">전자담배</a>
                             <a class="dropdown-item" href="/board/cigarette1">궐련형</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Best</a>
+                            <a class="dropdown-item" href="/board/best1">Best</a>
                         </div>
                     </li>
             </ul>
