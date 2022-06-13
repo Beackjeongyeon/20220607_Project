@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: user
@@ -8,23 +9,87 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-
-    <jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
+     <jsp:include page="../layout/header.jsp" flush="false"></jsp:include><br><br><br>
     <title>게시판입니다.</title>
+
 </head>
 <body>
 
-<div name="pagesave">
-<button type="button"  onclick="pagesave()" class="btn btn-primary btn-lg">글작성하기</button>
+
+<div class="container">
+<button type="button" class="btn btn-success"><a href="/board/save1">글작성하기</a></button>
 </div>
 
-</body>
-<script>
-    function pagesave() {
 
-        var popupX = (document.body.offsetWidth / 2) - (200 / 2);
-        var popupY= (window.screen.height / 2) - (300 / 2);
-        window.open('/board/save1', 'boardsave', 'status=no, height=600, width=500, left='+ popupX + ', top='+ 200);
-    }
-</script>
+
+<div class="container">
+    <table class="table">
+<tr>
+    <th>글번호</th>
+    <th>글제목</th>
+    <th>작성자</th>
+    <th>조회수</th>
+    <th>글작성일</th>
+
+</tr>
+<c:forEach items="${boardList}" var="board">
+    <tr>
+        <td>${board.id}</td>
+        <td><a href="/board/detail?&id=${board.id}">${board.boardTitle}</a></td>
+        <td>${board.boardWriter}</td>
+        <td>${board.boardHits}</td>
+        <td>${board.boardCreateDate}</td>
+    </tr>
+</c:forEach>
+    </table>
+</div>
+<div class="container">
+    <ul class="pagination justify-content-center">
+        <c:choose>
+            <%-- 현재 페이지가 1페이지면 이전 글자만 보여줌 --%>
+        <c:when test="${paging.page<=1}">
+        <li class="page-item disabled">
+            <a class="page-link">[이전]</a>
+        </li>
+        </c:when>
+            <%-- 1페이지가 아닌 경우에는 [이전]을 클릭하면 현재 페이지보다 1 작은 페이지 요청 --%>
+        <c:otherwise>
+        <li class="page-item">
+            <a class="page-link" href="/paging?page=${paging.page-1}">[이전]</a>
+        </li>
+        </c:otherwise>
+        </c:choose>
+
+        <%--  for(int i=startPage; i<=endPage; i++)      --%>
+        <c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="i" step="1">
+        <c:choose>
+            <%-- 요청한 페이지에 있는 경우 현재 페이지 번호는 텍스트만 보이게 --%>
+        <c:when test="${i eq paging.page}">
+        <li class="page-item active">
+            <a class="page-link">${i}</a>
+        </li>
+        </c:when>
+
+        <c:otherwise>
+        <li class="page-item">
+            <a class="page-link" href="/paging?page=${i}">${i}</a>
+        </li>
+        </c:otherwise>
+        </c:choose>
+        </c:forEach>
+
+        <c:choose>
+        <c:when test="${paging.page>=paging.maxPage}">
+        <li class="page-item disabled">
+            <a class="page-link">[다음]</a>
+        </li>
+        </c:when>
+        <c:otherwise>
+        <li class="page-item">
+            <a class="page-link" href="/paging?page=${paging.page+1}">[다음]</a>
+        </li>
+        </c:otherwise>
+        </c:choose>
+
+</body>
 </html>

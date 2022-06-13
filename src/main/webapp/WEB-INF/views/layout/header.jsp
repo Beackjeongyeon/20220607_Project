@@ -62,7 +62,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">목록창</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/board/pagingList1">게시판</a>
+                            <a class="dropdown-item" href="/board/paging">게시판</a>
                             <a class="dropdown-item" href="/board/liquid1">액상</a>
                             <a class="dropdown-item" href="/board/device1">전자담배</a>
                             <a class="dropdown-item" href="/board/cigarette1">궐련형</a>

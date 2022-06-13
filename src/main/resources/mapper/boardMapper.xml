@@ -4,6 +4,18 @@
 <mapper namespace="board">
     <insert id="save" parameterType="board">
         insert into board_table(boardTitle,boardWriter,boardContents,boardHits,boardCreateDate,boardFileName)
-                    values(#{boardTitle},#{boardWriter},#{boardContents},#{boardHits},#{boardCreateDate},#{boardFileName})
+                    values(#{boardTitle},#{boardWriter},#{boardContents},#{boardHits},now(),#{boardFileName})
     </insert>
+
+    <select id="findAll" resultType="board">
+        select*from board_table
+    </select>
+
+    <select id="pagingList" parameterType="java.util.HashMap" resultType="board">
+        select * from board_table order by id desc limit #{start}, #{limit}
+    </select>
+
+    <select id="count" resultType="int">
+        select count(id) from board_table
+    </select>
 </mapper>

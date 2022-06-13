@@ -1,12 +1,17 @@
 package com.its.ShoppingMall.controller;
 
 import com.its.ShoppingMall.dto.BoardDTO;
+import com.its.ShoppingMall.dto.PageDTO;
 import com.its.ShoppingMall.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Controller
 public class BoardController {
@@ -15,9 +20,11 @@ public class BoardController {
 
     // 게시판
  @GetMapping("/board/pagingList1")
-    public String pagingList(){
+    public String pagingList(Model model){
+      List<BoardDTO> boardDTOList= boardService.findAll();
+      model.addAttribute("boardList",boardDTOList);
 
-     return "/board/pagingList";
+      return "/board/pagingList";
  }
 
     // 액상
@@ -47,14 +54,22 @@ public class BoardController {
  @GetMapping ("/board/save1")
     public String save1(){
 
-     return "board/save";
+     return "/board/save";
  }
  @PostMapping("/board/save")
     public String save(@ModelAttribute BoardDTO boardDTO){
      boardService.save(boardDTO);
-     return "/board/pagingList";
+     return "redirect:/board/pagingList1";
  }
-
+    @GetMapping("/board/paging")
+    public String paging(@RequestParam(value="page", required=false, defaultValue="1") int page,
+                         Model model) {
+        List<BoardDTO> boardList = boardService.pagingList(page);
+        PageDTO paging = boardService.paging(page);
+        model.addAttribute("boardList", boardList);
+        model.addAttribute("paging", paging);
+        return "board/pagingList";
+    }
 
 
 }
