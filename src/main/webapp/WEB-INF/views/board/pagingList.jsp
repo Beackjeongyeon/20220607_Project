@@ -8,7 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+
+    <jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
+    <title>게시판입니다.</title>
 </head>
 <body>
 
