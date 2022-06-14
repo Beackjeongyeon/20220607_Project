@@ -21,11 +21,15 @@ public class MemberRepository {
     }
 
 
-    public MemberDTO findId1(String memberEmail) {
+    public String findId1(String memberEmail) {
             System.out.println(memberEmail);
          return Sql.selectOne("member.findId",memberEmail);
 
 
+    }
+
+    public String findpassword(MemberDTO memberDTO) {
+      return Sql.selectOne("member.findPassword",memberDTO);
     }
 }
 

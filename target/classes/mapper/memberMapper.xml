@@ -13,8 +13,11 @@
         select*from member_table where memberId =#{memberId} and memberPassword=#{memberPassword}
     </select>
 
-    <select id="findId" parameterType="member" resultType="member">
-        select*from member_table where memberEmail=#{memberEmail}
+    <select id="findId" parameterType="String" resultType="String">
+    select memberId from member_table where memberEmail=#{memberEmail}
+    </select>
+    <select id="findPassword" parameterType="member" resultType="String">
+        select memberPassword from member_table where memberId=#{memberId} and memberPhone=#{memberPhone}
     </select>
 </mapper>
 

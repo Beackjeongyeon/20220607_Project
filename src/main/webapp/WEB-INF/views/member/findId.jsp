@@ -9,15 +9,16 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="../../../resources/css/bootstrap.min%20(2).css">
 </head>
 <body>
 <div class="container">
-    <tr>
-    <th>아이디</th>
-    </tr>
-    <tr>
-        <td>${memberId}</td>
-    </tr>
+
+        <div class="container">
+       <h3>당신의 아이디는 ?</h3> ${findid}<h3>입니다.</h3>
+        </div>
+
+
 
 </div>
 </body>

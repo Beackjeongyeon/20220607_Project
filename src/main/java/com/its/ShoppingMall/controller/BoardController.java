@@ -70,6 +70,11 @@ public class BoardController {
         model.addAttribute("paging", paging);
         return "board/pagingList";
     }
+    @GetMapping("/board/detail")
+    public String findById(@ModelAttribute BoardDTO boardDTO ,Model model){
+        BoardDTO board= boardService.findById(boardDTO);
+        return "board/detail";
+    }
 
 
 }

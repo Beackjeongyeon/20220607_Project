@@ -22,8 +22,11 @@ public class MemberService {
   }
 
 
-  public MemberDTO findId1(String memberEmail) {
-
+  public String findId1(String memberEmail) {
     return memberRepository.findId1(memberEmail);
+  }
+
+  public String findpassword(MemberDTO memberDTO) {
+    return memberRepository.findpassword(memberDTO);
   }
 }

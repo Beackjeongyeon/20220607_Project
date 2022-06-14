@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Title</title>
+    <jsp:include page="../layout/header.jsp" flush="false"></jsp:include><br><br><br>
 </head>
 <body>
   <td>

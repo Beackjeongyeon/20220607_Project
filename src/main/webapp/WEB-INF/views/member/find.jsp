@@ -20,7 +20,7 @@
         <button type="submit" class="btn btn-primary">확인</button><br>
     </form>
 
-    <form action="/member/findPassword" method="post">
+    <form action="/member/findPassword1" method="post">
         <h2>비밀번호찾기</h2><br>
         <h3>아이디입력</h3>
         <input type="text"  class="form-control" id="memberId" name="memberId" placeholder="아이디를 입력해주세요"><br>

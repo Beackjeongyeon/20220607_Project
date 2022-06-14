@@ -64,4 +64,10 @@ public class BoardService {
         paging.setMaxPage(maxPage);
         return paging;
     }
+
+    public BoardDTO findById(BoardDTO boardDTO) {
+        // 1. 조회수 증가, 2. 상세정보 가져오기
+        boardRepository.updateHits(boardDTO);
+        return boardRepository.findById(boardDTO);
+    }
 }

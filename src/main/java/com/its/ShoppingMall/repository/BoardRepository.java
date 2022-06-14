@@ -30,4 +30,12 @@ public class BoardRepository {
     public int boardCount() {
         return Sql.selectOne("board.count");
     }
+
+    public void updateHits(BoardDTO boardDTO) {
+        Sql.update("board.updateHits",boardDTO);
+    }
+
+    public BoardDTO findById(BoardDTO boardDTO) {
+        return Sql.selectOne("board.findById",boardDTO);
+    }
 }
