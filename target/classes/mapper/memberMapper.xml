@@ -5,8 +5,8 @@
 
 <mapper namespace="member">
     <insert id="save" parameterType="member">
-        insert into member_table(memberId,memberPassword,memberEmail,memberName,memberPhone,memberBirth,memberAddress)
-                    values (#{memberId},#{memberPassword},#{memberEmail},#{memberName},#{memberPhone},#{memberBirth},#{memberAddress})
+        insert into member_table(memberId,memberPassword,memberEmail,memberName,memberPhone,memberBirth,memberCreatedDate,memberAddress)
+                    values (#{memberId},#{memberPassword},#{memberEmail},#{memberName},#{memberPhone},#{memberBirth},now(),#{memberAddress})
     </insert>
 
     <select id="login" parameterType="member" resultType="member">
@@ -18,6 +18,10 @@
     </select>
     <select id="findPassword" parameterType="member" resultType="String">
         select memberPassword from member_table where memberId=#{memberId} and memberPhone=#{memberPhone}
+    </select>
+    <select id="findById" parameterType="Long" resultType="member">
+    select*from member_table where id=#{id}
+
     </select>
 </mapper>
 

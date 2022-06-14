@@ -31,6 +31,12 @@
                             <li class="nav-item">
                                 <a class="nav-link " href="" onclick="memberlogin()">로그인</a>
                             </li>
+
+                    <div name="memberSignup">
+                <li class="nav-item">
+                    <a class="nav-link" href="" onclick="memberSignup()">회원가입</a>
+                </li>
+                    </div>
                         </c:when>
                         <c:otherwise>
                             <li class="nav-item">
@@ -41,11 +47,6 @@
 
 
                     <%-- 회원가입 --%>
-                    <div name="memberSignup">
-                <li class="nav-item">
-                    <a class="nav-link" href="" onclick="memberSignup()">회원가입</a>
-                </li>
-                    </div>
 
 
                     <%-- 회원정보 --%>
@@ -54,7 +55,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">회원정보</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/board/pagingList1">Mypage</a>
+                            <a class="dropdown-item" href="/board/mypage1">Mypage</a>
                             <a class="dropdown-item" href="/board/liquid1">회원탈퇴</a>
                             <a class="dropdown-item" href="/board/device1">장바구니</a>
                             <a class="dropdown-item" href="/board/cigarette1">구매내역</a>

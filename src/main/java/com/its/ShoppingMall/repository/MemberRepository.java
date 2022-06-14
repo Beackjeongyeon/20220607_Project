@@ -5,6 +5,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Repository
@@ -31,6 +32,10 @@ public class MemberRepository {
 
     public String findpassword(MemberDTO memberDTO) {
       return Sql.selectOne("member.findPassword",memberDTO);
+    }
+
+    public MemberDTO findById(Long id) {
+       return Sql.selectOne("member.findById",id);
     }
 }
 

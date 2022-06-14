@@ -5,6 +5,7 @@ import com.its.ShoppingMall.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Service
@@ -30,4 +31,9 @@ public class MemberService {
   public String findpassword(MemberDTO memberDTO) {
     return memberRepository.findpassword(memberDTO);
   }
+
+  public MemberDTO findById(Long id) {
+    return memberRepository.findById(id);
+  }
 }
+

@@ -32,8 +32,6 @@ public class MemberController {
             Long id = loginresult.getId();
             session.setAttribute("memberId", memberId);
             session.setAttribute("Id", id);
-//            List<BoardDTO> boardDTOList = boardService.findAll();
-//            model.addAttribute("boardList", boardDTOList);
             return "redirect:/";
         } else {
             return "member/login";
@@ -42,7 +40,7 @@ public class MemberController {
     @GetMapping("/member/logout")
     public String logout(HttpSession session){
         session.removeAttribute("memberId");
-        session.removeAttribute("id");
+        session.removeAttribute("Id");
         return "redirect:/";
 
     }
@@ -75,6 +73,16 @@ public class MemberController {
            model.addAttribute("findpassword",result);
         System.out.println(result);
            return"/member/findPassword";
+
+    }
+    @GetMapping("/board/mypage1")
+    public String mypage(HttpSession session,Model model){
+        Long id = (Long)session.getAttribute("Id");
+        System.out.println(model);
+        System.out.println(id);
+            MemberDTO memberDTOList = memberService.findById(id);
+            model.addAttribute("result",memberDTOList);
+        return "/member/mypage";
 
     }
 
