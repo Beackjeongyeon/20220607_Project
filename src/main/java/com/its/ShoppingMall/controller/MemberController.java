@@ -32,12 +32,19 @@ public class MemberController {
             Long id = loginresult.getId();
             session.setAttribute("memberId", memberId);
             session.setAttribute("Id", id);
-            List<BoardDTO> boardDTOList = boardService.findAll();
-            model.addAttribute("boardList", boardDTOList);
+//            List<BoardDTO> boardDTOList = boardService.findAll();
+//            model.addAttribute("boardList", boardDTOList);
             return "redirect:/";
         } else {
             return "member/login";
         }
+    }
+    @GetMapping("/member/logout")
+    public String logout(HttpSession session){
+        session.removeAttribute("memberId");
+        session.removeAttribute("id");
+        return "redirect:/";
+
     }
     @GetMapping("/member/Signup")
     public String Signup(){

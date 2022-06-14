@@ -26,6 +26,7 @@ public class BoardService {
     }
 
     public List<BoardDTO> findAll() {
+
         return boardRepository.findAll();
     }
 

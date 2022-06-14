@@ -20,6 +20,7 @@ public class BoardRepository {
     }
 
     public List<BoardDTO> findAll() {
+
         return Sql.selectList("board.findAll");
     }
 

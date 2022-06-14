@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: user
@@ -24,14 +25,19 @@
             <ul class="navbar-nav me-auto">
 
 
-
-
-                <%-- 로그인 --%>
-                    <div name="memberlogin">
-                <li class="nav-item">
-                    <a class="nav-link " href="" onclick="memberlogin()">로그인</a>
-                </li>
-                    </div>
+                    <%-- 로그인&로그아웃 --%>
+                    <c:choose>
+                        <c:when test="${sessionScope.memberId ==null}">
+                            <li class="nav-item">
+                                <a class="nav-link " href="" onclick="memberlogin()">로그인</a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/member/logout" >로그아웃</a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
 
 
                     <%-- 회원가입 --%>
@@ -42,10 +48,9 @@
                     </div>
 
 
-
-
-
                     <%-- 회원정보 --%>
+                        <c:choose>
+                            <c:when test="${sessionScope.memberId !=null}">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">회원정보</a>
                         <div class="dropdown-menu">
@@ -75,6 +80,15 @@
                 <input class="form-control me-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
+            </c:when>
+            <c:otherwise>
+                <li class="nav-item">
+                    <a class="nav-link " href="/member/nonmember" >비회원주문조회</a>
+                </li><br>
+            </c:otherwise>
+
+            </c:choose>
+
         </div>
     </div>
 </nav>
