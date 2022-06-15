@@ -84,7 +84,7 @@
 </c:when>
 <c:otherwise>
     <div class="container">
-        <button type="submit" class="btn btn-success"><a href="/product1/save1">상품등록</a></button>
+        <button type="submit" class="btn btn-success"><a href="/product/put1">상품등록</a></button>
     </div>
 </c:otherwise>
 </c:choose>
@@ -126,7 +126,7 @@
 <br>
 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
     <div class="text-center">
-        <a class="btn btn-outline-dark mt-auto" href="product1/basket1">장바구니에 담기</a>
+        <a class="btn btn-outline-dark mt-auto" href="product1/basket1" >장바구니에 담기</a>
     </div>
 </div>
 </div>
@@ -155,6 +155,13 @@
         // Actual slide
         dynamicSlider.firstElementChild.style.setProperty("margin-left", "-" + curSlide + "00%");
     }, slideDelay);
+
+    function put() {
+
+        var popupX = (document.body.offsetWidth / 2) - (200 / 2);
+        var popupY= (window.screen.height / 2) - (300 / 2);
+        window.open('/member/login', 'memberlogin', 'status=no, height=600, width=500, left='+ popupX + ', top='+ 200);
+    }
 </script>
 </body>
 </html>

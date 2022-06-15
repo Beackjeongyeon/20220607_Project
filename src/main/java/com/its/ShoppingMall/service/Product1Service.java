@@ -33,4 +33,7 @@ public class Product1Service {
     public List<Product1DTO> findAll() {
        return product1Repository.findAll();
     }
+
+    public void basket() {
+    }
 }

@@ -38,6 +38,11 @@ public class Product1Controller {
         System.out.println(product1DTO);
         return "/product/save";
         }
+        @GetMapping("/product/put1")
+    public String basket(Model model){
+        product1Service.basket()
+
+        }
     }
 
 
