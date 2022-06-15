@@ -35,5 +35,9 @@ public class MemberService {
   public MemberDTO findById(Long id) {
     return memberRepository.findById(id);
   }
+
+    public int delete(MemberDTO memberDTO) {
+      return memberRepository.delete(memberDTO);
+    }
 }
 

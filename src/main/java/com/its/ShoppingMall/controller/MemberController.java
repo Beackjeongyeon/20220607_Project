@@ -85,6 +85,26 @@ public class MemberController {
         return "/member/mypage";
 
     }
+    @GetMapping("/member/delete2")
+    public String delete(){
+        return"/member/delete";
+    }
+    @GetMapping("/member/delete1")
+    public String delete(HttpSession session,@ModelAttribute MemberDTO memberDTO){
+         int result =memberService.delete(memberDTO);
+         if(result >0){
+             session.removeAttribute("memberId");
+             session.removeAttribute("Id");
+             return"redirect:/";
+         }else{
+             return "/member/delete";
+         }
+    }
+    @GetMapping("/member/admin1")
+    public String admin(){
+        return "/admin";
+    }
+
 
 
 }

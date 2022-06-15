@@ -23,6 +23,9 @@
     select*from member_table where id=#{id}
 
     </select>
+    <delete id="delete" parameterType="String">
+        delete from member_table where memberId=#{memberId} and memberPassword=#{memberPassword}
+    </delete>
 </mapper>
 
 

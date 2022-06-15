@@ -13,7 +13,7 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../../../../resources/css/styles.css" rel="stylesheet" />
+    <link href="../../../resources/css/styles.css" rel="stylesheet" />
 
     <style>
         #slider {
@@ -49,18 +49,18 @@
 </head>
 <body>
 
-<jsp:include page="../../layout/header.jsp" flush="false"></jsp:include>
+<jsp:include page="../layout/header.jsp" flush="false"></jsp:include>
 
     <div class="container">
         <ul id="slider">
             <li>
-                <img src="../../../../resources/img/123456.JPG"  >
+                <img src="../../../resources/img/123456.JPG"  >
             </li>
             <li>
-                <img src="../../../../resources/img/23232323131.JPG">
+                <img src="../../../resources/img/23232323131.JPG">
             </li>
             <li>
-                <img src="../../../../resources/img/323123123123123.JPG">
+                <img src="../../../resources/img/323123123123123.JPG">
             </li>
         </ul>
     </div>

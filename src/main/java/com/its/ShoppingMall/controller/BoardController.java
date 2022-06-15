@@ -27,29 +27,23 @@ public class BoardController {
       return "/board/pagingList";
  }
 
-    // 액상
- @GetMapping("/board/liquid1")
-    public String liquid(){
-
-     return "board/liquid/liquid";
- }
 
     // 전자담배기기
  @GetMapping("/board/device1")
     public String device(){
 
-     return "board/device/device";
+     return "product/device";
  }
 
     // 궐련형
  @GetMapping("/board/cigarette1")
     public String cigarette(){
 
-     return "board/cigarette/cigarette";
+     return "product/cigarette";
  }
  @GetMapping  ("/board/best1")
     public String best(){
-     return "board/best/best";
+     return "product/best";
  }
  @GetMapping ("/board/save1")
     public String save1(){

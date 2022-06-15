@@ -46,7 +46,11 @@
                     </c:choose>
 
 
-                    <%-- 회원가입 --%>
+                        <c:if test="${sessionScope.memberId eq 'admin'}">
+                            <li class="nav-item">
+                                <a class="nav-link " href="/member/admin1" >관리자페이지</a>
+                            </li><br>
+                        </c:if>
 
 
                     <%-- 회원정보 --%>
@@ -56,7 +60,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">회원정보</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="/board/mypage1">Mypage</a>
-                            <a class="dropdown-item" href="/board/liquid1">회원탈퇴</a>
+                            <a class="dropdown-item" href="/member/delete1">회원탈퇴</a>
                             <a class="dropdown-item" href="/board/device1">장바구니</a>
                             <a class="dropdown-item" href="/board/cigarette1">구매내역</a>
                             <div class="dropdown-divider"></div>
@@ -69,7 +73,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">목록창</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="/board/paging">게시판</a>
-                            <a class="dropdown-item" href="/board/liquid1">액상</a>
+                            <a class="dropdown-item" href="/product/liquid1">액상</a>
                             <a class="dropdown-item" href="/board/device1">전자담배</a>
                             <a class="dropdown-item" href="/board/cigarette1">궐련형</a>
                             <div class="dropdown-divider"></div>
@@ -89,7 +93,6 @@
             </c:otherwise>
 
             </c:choose>
-
         </div>
     </div>
 </nav>

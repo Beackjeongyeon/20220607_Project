@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="product1">
+    <insert id="save" parameterType="product1">
+        INSERT INTO product1_table (productName1, productPrice1,productStock1, productFileName1)
+        VALUES (#{productName1}, #{productPrice1},#{productStock1}, #{productFileName1})
+    </insert>
+    <select id="findAll" resultType="product1">
+        select*from product1_table
+    </select>
+
+</mapper>

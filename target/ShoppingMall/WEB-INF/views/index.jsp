@@ -69,7 +69,7 @@
     <c:otherwise>
         <br><br><br><div class="container">
         <img src="../../resources/img/2021123111513014321_1.jpg" style="margin-left:350px" ><br><br>
-        <h1>위사이트는 청소년 유해매체물로서 정보통신망 이용촉진법 및 청소년 보호등에 관한 법률 및 청소년보호법 규정에 의하여 만18세 미만의 청소년은 사용할수 없습니다.</h1><br><br>\
+        <h1>위사이트는 청소년 유해매체물로서 정보통신망 이용촉진법 및 청소년 보호등에 관한 법률 및 청소년보호법 규정에 의하여 만18세 미만의 청소년은 사용할수 없습니다.</h1><br><br>
         </div><br><br>
     </c:otherwise>
 </c:choose>
