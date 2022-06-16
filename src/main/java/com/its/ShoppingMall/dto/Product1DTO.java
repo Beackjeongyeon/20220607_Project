@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product1DTO {
-
+    private Long id;
     private String productName1;
     private int productPrice1;
     private int productStock1;

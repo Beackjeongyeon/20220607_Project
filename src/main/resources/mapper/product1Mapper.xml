@@ -7,9 +7,19 @@
     <insert id="save" parameterType="product1">
         INSERT INTO product1_table (productName1, productPrice1,productStock1, productFileName1)
         VALUES (#{productName1}, #{productPrice1},#{productStock1}, #{productFileName1})
+    <selectKey resultType="Long" keyProperty="id" order="AFTER">
+    select last_insert_id()
+    </selectKey>
+
     </insert>
     <select id="findAll" resultType="product1">
         select*from product1_table
+    </select>
+    <select id="find" parameterType="Long" resultType="product1">
+        select*from product1_table where id=#{id}
+    </select>
+    <select id="findById" parameterType="Long" resultType="product1">
+        select*from product1_table where id=#{id}
     </select>
 
 </mapper>

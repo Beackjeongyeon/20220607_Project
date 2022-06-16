@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
@@ -18,6 +19,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../../../resources/css/styles.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../../../resources/css/bootstrap.min%20(2).css">
+
     <style>
         #slider {
             width: 100%;
@@ -84,13 +86,12 @@
 </c:when>
 <c:otherwise>
     <div class="container">
-        <button type="submit" class="btn btn-success"><a href="/product/put1">상품등록</a></button>
+        <button type="submit" class="btn btn-success"><a href="/product1/save1">상품등록</a></button>
     </div>
 </c:otherwise>
 </c:choose>
 <div class="col mb-5">
     <c:forEach items="${productList}" var="productList">
-
     <div class="card h-100">
         <div class="row">
             <div class="col">
@@ -114,6 +115,11 @@
                             <tr>
                                 <td><h3>3.재고:${productList.productStock1}&nbsp;개</h3></td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <a href="/product1/put1?id=${productList.id}" class="btn btn-success">장바구니에담기</a>
+                                </td>
+                            </tr>
                         </div>
                     </table>
                 </div>
@@ -125,11 +131,12 @@
 </div>
 <br>
 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-    <div class="text-center">
-        <a class="btn btn-outline-dark mt-auto" href="product1/basket1" >장바구니에 담기</a>
-    </div>
+
+
+
 </div>
 </div>
+</form>
 </c:forEach>
 </div>
 <!-- Footer-->
@@ -156,12 +163,7 @@
         dynamicSlider.firstElementChild.style.setProperty("margin-left", "-" + curSlide + "00%");
     }, slideDelay);
 
-    function put() {
 
-        var popupX = (document.body.offsetWidth / 2) - (200 / 2);
-        var popupY= (window.screen.height / 2) - (300 / 2);
-        window.open('/member/login', 'memberlogin', 'status=no, height=600, width=500, left='+ popupX + ', top='+ 200);
-    }
 </script>
 </body>
 </html>

@@ -1,9 +1,11 @@
 package com.its.ShoppingMall.service;
 
+import com.its.ShoppingMall.controller.Product1Controller;
 import com.its.ShoppingMall.dto.Product1DTO;
 import com.its.ShoppingMall.repository.Product1Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -16,7 +18,7 @@ public class Product1Service {
     private Product1Repository product1Repository;
 
 
-    public void save(Product1DTO product1DTO)throws IOException {
+    public int save(Product1DTO product1DTO) throws IOException {
         System.out.println(product1DTO);
         System.out.println("Product1Service.save");
         MultipartFile productFile1 = product1DTO.getProductFile1();
@@ -28,12 +30,20 @@ public class Product1Service {
         if (!productFile1.isEmpty()) {
             productFile1.transferTo(new File(savePath));
         }
-            product1Repository.save(product1DTO);
-    }
-    public List<Product1DTO> findAll() {
-       return product1Repository.findAll();
+        return product1Repository.save(product1DTO);
     }
 
-    public void basket() {
+    public List<Product1DTO> findAll() {
+        return product1Repository.findAll();
+    }
+
+    public  Product1DTO find(Long result) {
+        return product1Repository.find(result);
+    }
+
+    public Product1DTO findById(Long id) {
+        return product1Repository.findById(id);
+
     }
 }
+
