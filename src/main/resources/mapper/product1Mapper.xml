@@ -7,7 +7,7 @@
     <insert id="save" parameterType="product1">
         INSERT INTO product1_table (productName1, productPrice1,productStock1, productFileName1)
         VALUES (#{productName1}, #{productPrice1},#{productStock1}, #{productFileName1})
-    <selectKey resultType="Long" keyProperty="id" order="AFTER">
+    <selectKey resultType="Long" keyProperty="p1_id" order="AFTER">
     select last_insert_id()
     </selectKey>
 
@@ -16,10 +16,10 @@
         select*from product1_table
     </select>
     <select id="find" parameterType="Long" resultType="product1">
-        select*from product1_table where id=#{id}
+        select*from product1_table where p1_id=#{p1_id}
     </select>
     <select id="findById" parameterType="Long" resultType="product1">
-        select*from product1_table where id=#{id}
+        select*from product1_table where p1_id=#{p1_id}
     </select>
 
 </mapper>

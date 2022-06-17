@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="product3">
+    <insert id="save" parameterType="product3">
+        INSERT INTO product3_table (productName3, productPrice3,productStock3, productFileName3)
+        VALUES (#{productName3}, #{productPrice3},#{productStock3}, #{productFileName3})
+    <selectKey resultType="Long" keyProperty="p3_id" order="AFTER">
+    select last_insert_id()
+    </selectKey>
+
+    </insert>
+    <select id="findAll" resultType="product3">
+        select*from product3_table
+    </select>
+    <select id="find" parameterType="Long" resultType="product3">
+        select*from product3_table where p3_id=#{p3_id}
+    </select>
+    <select id="findById" parameterType="Long" resultType="product3">
+        select*from product3_table where p1_id=#{p3_id}
+    </select>
+
+</mapper>

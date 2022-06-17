@@ -8,13 +8,13 @@ import org.springframework.web.multipart.MultipartFile;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product1DTO {
-    private Long p1_id;
-    private String productName1;
-    private int productPrice1;
-    private int productStock1;
-    private MultipartFile productFile1;
-    private String productFileName1;
+public class Product2DTO {
+    private Long p2_id;
+    private String productName2;
+    private int productPrice2;
+    private int productStock2;
+    private MultipartFile productFile2;
+    private String productFileName2;
 
 
 

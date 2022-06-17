@@ -74,10 +74,9 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="/board/paging">게시판</a>
                             <a class="dropdown-item" href="/product/liquid1">액상</a>
-                            <a class="dropdown-item" href="/board/device1">전자담배</a>
-                            <a class="dropdown-item" href="/board/cigarette1">궐련형</a>
+                            <a class="dropdown-item" href="/product/device1">전자담배</a>
+                            <a class="dropdown-item" href="/product/cigarette1">궐련형</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/board/best1">Best</a>
                         </div>
                     </li>
             </ul>

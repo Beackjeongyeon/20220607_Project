@@ -41,8 +41,8 @@ public class Product1Service {
         return product1Repository.find(result);
     }
 
-    public Product1DTO findById(Long id) {
-        return product1Repository.findById(id);
+    public Product1DTO findById(Long p1_id) {
+        return product1Repository.findById(p1_id);
 
     }
 }

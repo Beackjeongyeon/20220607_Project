@@ -29,7 +29,7 @@ public class MemberController {
         MemberDTO loginresult = memberService.login(memberDTO);
         if (loginresult != null) {
             String memberId = loginresult.getMemberId();
-            Long id = loginresult.getId();
+            Long id = loginresult.getM_id();
             session.setAttribute("memberId", memberId);
             session.setAttribute("Id", id);
             return "redirect:/";

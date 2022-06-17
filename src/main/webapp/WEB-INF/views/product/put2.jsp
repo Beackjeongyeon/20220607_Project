@@ -29,10 +29,10 @@
             <th>금액</th>
         </tr>
         <tr>
-            <td>${result.productName1}</td>
-            <td>${result.productPrice1}</td>
-            <td>${result.productStock1}</td>
-            <td>${result.productPrice1}</td>
+            <td>${result.productName2}</td>
+            <td>${result.productPrice2}</td>
+            <td>${result.productStock2}</td>
+            <td>${result.productPrice2}</td>
             <td></td>
 
         </tr>

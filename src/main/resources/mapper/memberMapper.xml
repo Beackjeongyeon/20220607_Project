@@ -20,7 +20,7 @@
         select memberPassword from member_table where memberId=#{memberId} and memberPhone=#{memberPhone}
     </select>
     <select id="findById" parameterType="Long" resultType="member">
-    select*from member_table where id=#{id}
+    select*from member_table where m_id=#{m_id}
 
     </select>
     <delete id="delete" parameterType="String">

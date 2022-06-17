@@ -6,5 +6,7 @@
         <typeAlias type="com.its.ShoppingMall.dto.MemberDTO" alias="member" />
         <typeAlias type="com.its.ShoppingMall.dto.BoardDTO" alias="board" />
         <typeAlias type="com.its.ShoppingMall.dto.Product1DTO" alias="product1" />
+        <typeAlias type="com.its.ShoppingMall.dto.Product2DTO" alias="product2" />
+        <typeAlias type="com.its.ShoppingMall.dto.Product3DTO" alias="product3" />
     </typeAliases>
 </configuration>

@@ -33,8 +33,8 @@ public class Product1Controller {
 
     }
     @GetMapping("/product1/put1")
-    public String put(@RequestParam("id") Long id, Model model){
-       Product1DTO resultlist= product1Service.findById(id);
+    public String put(@RequestParam("p1_id") Long p1_id, Model model){
+       Product1DTO resultlist= product1Service.findById(p1_id);
        model.addAttribute("result",resultlist);
         System.out.println("Product1Controller.put");
         System.out.println(resultlist);
@@ -44,10 +44,10 @@ public class Product1Controller {
     @PostMapping("/product1/save")
     public String save(@ModelAttribute Product1DTO product1DTO) throws IOException {
         product1Service.save(product1DTO);
-        product1Service.find(product1DTO.getId());
+        product1Service.find(product1DTO.getP1_id());
         System.out.println("Product1Controller.save");
-        System.out.println(product1DTO.getId());
-        return "redirect:/product1/put1?id="+product1DTO.getId();
+        System.out.println(product1DTO.getP1_id());
+        return "redirect:/product1/put1?p1_id="+product1DTO.getP1_id();
     }
 
 }

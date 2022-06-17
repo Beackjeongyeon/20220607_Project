@@ -24,7 +24,7 @@ public class Product1Repository {
         return Sql.selectOne("product1.find");
     }
 
-    public Product1DTO findById(Long id) {
-        return Sql.selectOne("product1.findById",id);
+    public Product1DTO findById(Long p1_id) {
+        return Sql.selectOne("product1.findById",p1_id);
     }
 }

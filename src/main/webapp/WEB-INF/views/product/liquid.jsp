@@ -117,7 +117,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="/product1/put1?id=${productList.id}" class="btn btn-success">장바구니에담기</a>
+                                    <a href="/product1/put1?p1_id=${productList.p1_id}" class="btn btn-success">장바구니에담기</a>
                                 </td>
                             </tr>
                         </div>
